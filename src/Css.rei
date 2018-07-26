@@ -782,3 +782,19 @@ module SVG: {
   let stopColor: color => rule;
   let stopOpacity: float => rule;
 };
+
+/**
+ * Server
+ */
+
+module Server = {
+  type staticElements = {
+    .
+    css: string,
+    html: string,
+    rules: array(string),
+    ids: array(string),
+  };
+  let renderStatic: unit => staticElements;
+}
+

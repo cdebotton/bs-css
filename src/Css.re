@@ -1547,3 +1547,14 @@ module SVG = {
   let stopColor = c => d("stopColor", string_of_color(c));
   let stopOpacity = o => d("stopOpacity", string_of_float(o));
 };
+
+module Server = {
+  type staticElements = {
+    .
+    css: string,
+    html: string,
+    rules: array(string),
+    ids: array(string),
+  };
+  [@bs.module "glamor/server"] external renderStatic : unit => staticElements = "";
+}
